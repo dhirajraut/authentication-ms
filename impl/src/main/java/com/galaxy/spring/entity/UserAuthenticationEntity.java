@@ -43,6 +43,8 @@ public class UserAuthenticationEntity {
 	private boolean active;
 	
 	@ManyToMany (cascade = CascadeType.ALL)
-	@JoinTable (name = "user_roles.id", joinColumns = @JoinColumn (name = "user_id"))
+	@JoinTable (name = "user_role_mapping",
+				joinColumns = @JoinColumn (name = "user_id"),
+				inverseJoinColumns = @JoinColumn (name = "role_id"))
 	private Set<UserRolesEntity> roles;
 }

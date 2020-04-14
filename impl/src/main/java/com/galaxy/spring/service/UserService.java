@@ -13,8 +13,8 @@ public class UserService {
 
 	@Autowired
 	IUserAuthenticationRepository repository;
-	@Autowired
-	ModelMapper modelMapper;
+//	@Autowired
+//	ModelMapper modelMapper;
 
 	public void findByUserId(String userId) throws EntityNotFoundException {
 	    UserAuthenticationEntity UserAuthenticationEntity = repository.findByUserId(userId)
